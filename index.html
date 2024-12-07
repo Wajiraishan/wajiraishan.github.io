@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Cineplex Movie Theater</title>
+    <style>
+        body {
+            background-image: url('background-image.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #110202; /* Set text color to contrast with the background */
+        }
+        
+          /* Custom class for card body background color */
+          .custom-card-body {
+            background-color: rgb(252, 252, 252); /* Set your desired background color for the card body */
+          }
+
+                  /* Blink animation for Now Showing section */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+         /* Highlight style for Now Showing section */
+         .highlight {
+            background-color: #fa3600; /* Set your desired highlight color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Add a subtle box shadow for depth */
+        }
+        /* Center the card title */
+        .card-title-center {
+            text-align: center;
+        }
+
+        /* Custom styles for card title */
+        .custom-card-title {
+            font-size: 1.5rem; /* Adjust the font size as needed */
+            font-weight: bold;
+            color: #a90000; /* Text color for the card title */
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="Cineplex.svg" alt="Cineplex Logo" width="150" height="120" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Movies
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="Featuredmovies.html">Featured Movies</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Comedy</a></li>
+                        <li><a class="dropdown-item" href="#">Drama</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">All Genres</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="schedule.html">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+                
+            </ul>
+            <!-- Add Signup and Login buttons -->
+            <div class="ms-auto">
+                <a class="btn btn-outline-light" href="sigup.html">Signup</a>
+                <a class="btn btn-light ml-2" href="login.html">Login</a>
+            </div>
+            
+        </div>
+    </div>
+        <form class="d-flex ml-auto">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+    
+</nav>
+
+<!-- Hero Section with Video Background -->
+
+
+<section class="hero">
+    <video autoplay muted loop playsinline class="w-100">
+        <source src="bgvideo.MP4" type="video/mp4">
+    </video>
+    <div class="container text-white text-center">
+        <h1 class="display-4">Welcome to Cineplex</h1>
+        <p class="lead">Experience the best in movie entertainment</p>
+        <a href="https://lk.bookmyshow.com/sri-lanka/cinemas/majestic-cineplex-colombo/MCCO" class="btn btn-primary btn-lg">Explore Now</a>
+    </div>
+</section>
+
+<!-- Now Showing Section -->
+<section class="now-showing my-5">
+    <div class="container">
+        <h2 class="text-center mb-4 blink highlight">Now Showing</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card custom-card-body">
+                    <img src="Aquaman.png" class="card-img-top" alt="Movie Poster">
+                    <div class="card-body custom-card-body" >
+                        <h5 class="card-title card-title-center custom-card-title">Aquaman And The Lost Kingdom (3D)</h5>
+                        <p class="card-text hidden"><h6><u>SYNOPSIS</u></h6>
+                            When an ancient power is unleashed, Aquaman must forge an uneasy alliance with an unlikely ally to protect Atlantis, and the world, from irreversible devastation.</p> 
+                            <button class="btn btn-primary" onmouseover="showDetails()">Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other movies -->
+             <!-- Movie 2 -->
+             <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="Sihinayaki Adare.jpg" class="card-img-top" alt="Movie 2 Poster">
+                    <div class="card-body custom-card-body">
+                        <h5 class="card-title card-title-center custom-card-title">Sihinayaki Adare</h5>
+                        <p class="card-text"><h6><u>SYNOPSIS</u></h6>
+                            A tale of four hearts driven by destiny.</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="Siren.jpg" class="card-img-top" alt="Movie 3 Poster">
+                    <div class="card-body custom-card-body">
+                        <h5 class="card-title card-title-center custom-card-title">Siren Tamil movie</h5>
+                        <p class="card-text"><h6><u>SYNOPSIS</u></h6>
+                            After being framed for the murder of a powerful man, a man vows to get revenge when he is released. When he gets out after 14 years, he hunts down the accuser, unleashing his pent-up rage on him.</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="call-to-action bg-primary text-white text-center py-5">
+    <div class="container">
+        <h2 class="display-4">Book your tickets now!</h2>
+        <p class="lead">Don't miss out on the latest blockbusters. Reserve your seats in advance.</p>
+        <a href="login.html" class="btn btn-light btn-lg">Book Now</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2024 Cineplex Movie Theater. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
