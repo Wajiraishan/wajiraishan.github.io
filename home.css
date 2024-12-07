@@ -1,0 +1,108 @@
+/* General body styling */
+body {
+    background-image: url('background-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #110202; /* Text color to contrast with the background */
+}
+
+/* Custom card body background color */
+.custom-card-body {
+    background-color: rgb(252, 252, 252); /* Card body background color */
+}
+
+/* Blink animation for "Now Showing" section */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+/* Highlight style for "Now Showing" section */
+.highlight {
+    background-color: #fa3600; /* Highlight color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+}
+
+/* Center the card title */
+.card-title-center {
+    text-align: center;
+}
+
+/* Custom styles for card title */
+.custom-card-title {
+    font-size: 1.5rem; /* Font size for card titles */
+    font-weight: bold;
+    color: #a90000; /* Card title text color */
+}
+
+/* Navbar logo styling */
+.navbar-dark .navbar-brand img {
+    width: 150px;
+    height: 120px;
+}
+
+/* Navbar buttons */
+.navbar .btn-outline-light {
+    margin-right: 10px;
+}
+
+/* Hero section */
+.hero video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Call-to-action section */
+.call-to-action {
+    padding: 50px 0;
+    background-color: #007bff; /* Primary blue background */
+    color: #fff; /* White text */
+    text-align: center;
+}
+
+.call-to-action h2 {
+    margin-bottom: 20px;
+}
+
+.call-to-action p {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Search bar styling */
+.navbar .form-control {
+    width: 200px;
+    margin-right: 10px;
+}
+
+.navbar .btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+}
